@@ -14,8 +14,8 @@ def place_pieces(board):
         0: Rook,
         1: Knight,
         2: Bishop,
-        3: King,
-        4: Queen,
+        3: Queen,
+        4: King,
         5: Bishop,
         6: Knight,
         7: Rook
@@ -26,10 +26,8 @@ def place_pieces(board):
         new_black_piece = piece_type[k](Color.Black, k, 0, board)
         list_of_pieces.append(new_white_piece)
         list_of_pieces.append(new_black_piece)
-
-    for i in range(8):
-        new_white_pawn = Pawn(Color.White, i, 6, board)
-        new_black_pawn = Pawn(Color.Black, i, 1, board)
+        new_white_pawn = Pawn(Color.White, k, 6, board)
+        new_black_pawn = Pawn(Color.Black, k, 1, board)
         list_of_pieces.append(new_white_pawn)
         list_of_pieces.append(new_black_pawn)
 
