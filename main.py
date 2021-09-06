@@ -9,45 +9,29 @@ current_turn = Color.White
 
 
 def place_pieces(board):
-    white_bishop1 = Bishop(Color.White, 2, 7, board)
-    white_bishop2 = Bishop(Color.White, 5, 7, board)
-    black_bishop1 = Bishop(Color.Black, 2, 0, board)
-    black_bishop2 = Bishop(Color.Black, 5, 0, board)
-    white_king = King(Color.White, 4, 7, board)
-    black_king = King(Color.Black, 4, 0, board)
-    white_rook1 = Rook(Color.White, 0, 7, board)
-    white_rook2 = Rook(Color.White, 7, 7, board)
-    black_rook1 = Rook(Color.Black, 0, 0, board)
-    black_rook2 = Rook(Color.Black, 7, 0, board)
-    white_knight1 = Knight(Color.White, 1, 7, board)
-    white_knight2 = Knight(Color.White, 6, 7, board)
-    black_knight1 = Knight(Color.Black, 1, 0, board)
-    black_knight2 = Knight(Color.Black, 6, 0, board)
-    white_queen = Queen(Color.White, 3, 7, board)
-    black_queen = Queen(Color.Black, 3, 0, board)
+
+    piece_type = {
+        0: Rook,
+        1: Knight,
+        2: Bishop,
+        3: King,
+        4: Queen,
+        5: Bishop,
+        6: Knight,
+        7: Rook
+    }
+
+    for k in piece_type.keys():
+        new_white_piece = piece_type[k](Color.White, k, 7, board)
+        new_black_piece = piece_type[k](Color.Black, k, 0, board)
+        list_of_pieces.append(new_white_piece)
+        list_of_pieces.append(new_black_piece)
+
     for i in range(8):
         new_white_pawn = Pawn(Color.White, i, 6, board)
         new_black_pawn = Pawn(Color.Black, i, 1, board)
         list_of_pieces.append(new_white_pawn)
         list_of_pieces.append(new_black_pawn)
-
-    list_of_pieces.append(white_bishop1)
-    list_of_pieces.append(white_bishop2)
-    list_of_pieces.append(black_bishop1)
-    list_of_pieces.append(black_bishop2)
-    list_of_pieces.append(black_rook1)
-    list_of_pieces.append(white_king)
-    list_of_pieces.append(black_king)
-    list_of_pieces.append(white_rook1)
-    list_of_pieces.append(white_rook2)
-    list_of_pieces.append(black_rook1)
-    list_of_pieces.append(black_rook2)
-    list_of_pieces.append(white_knight1)
-    list_of_pieces.append(white_knight2)
-    list_of_pieces.append(black_knight1)
-    list_of_pieces.append(black_knight2)
-    list_of_pieces.append(white_queen)
-    list_of_pieces.append(black_queen)
 
 
 def promotion_choice_surface(pawn):
