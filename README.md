@@ -1,4 +1,4 @@
-# szachy
+# Szachy
 
 1. Program tworzy listę, która będzie spełniać funkcję szachownicy i przypisuje ją do zmiennej board (create_board())
 2. W funkcji place_pieces(board) tworzone są figury i ustawiane na szachownicy. Wykorzystuję do tego słownik piece_type.
@@ -23,3 +23,11 @@
   zmienia się na None, by żadna ze stron nie mogła już wykonywać ruchów i gra kończy się. 
 8. Każda z figur ma metodę is_patch_clear, która sprawdza, czy przy próbie ruchu "droga" między aktualnym polem i polem docelowym jest pusta.
 9. Color jest Enumem ze nadpisaną negacją, aby możliwe były tylko wartości White i Black (oraz None na koniec gry).
+
+
+
+![screen1](https://user-images.githubusercontent.com/81564842/167123881-4375c62e-c966-4987-a4a3-28b001d28d87.PNG)
+![screen2](https://user-images.githubusercontent.com/81564842/167123931-1564e89c-084f-4cea-b76e-bafc2b8049fc.PNG)
+![screen3](https://user-images.githubusercontent.com/81564842/167123958-c464361c-b789-4853-b614-e14611b0ed2b.PNG)
+![image](https://user-images.githubusercontent.com/81564842/167123831-95d8e4ff-853d-4bfb-96a2-8bcb6cbc8aa7.png)
+
